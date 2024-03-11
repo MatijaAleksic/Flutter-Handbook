@@ -1,0 +1,12 @@
+1. Flutter
+2. Dart
+
+3. Flutter Snippets
+4. Awesome Flutter Snippets
+
+5. Pubspec Assist - pomoc oko dependencija u fajlu (pubspec.yaml)
+
+6. Dart Data Class Generator - pomoc generisanju klasa
+7. Flutter Tree - pregled flutter widgeta u vidu stabla da bi se lakse snalazio u hijerarhiji
+
+8. Flutter Intl - upravljanje lokalizovanim stringovima i generisanjem odgovarajuceg Dart koda za prevode
