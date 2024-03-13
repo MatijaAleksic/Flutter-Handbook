@@ -1,0 +1,25 @@
+#Instaliraj Flutter Extenziju
+
+pubspec.yaml - je fajl gdje se navode paketi, fontovi,... za projekat
+
+Shift + Tab = Formatira kod u pubspec.yaml jel mora sve da bude u indentu kao python
+Crtl + Alt + L = Format cjelog fajla (za dart)
+
+#Stateless class ili widget - Njegovo stanje ne moze da se menja
+#Statefull class ili widget - Njegovo stanje moze da se menja
+
+Flutter Outline - sa desne strane tab za pregled stabla widgeta i precice (move down, wrap with... )
+
+U Flutter Outline kada vidis da nesto moze da bude svoj widget > klik na widget koji zelis da extraktujes > Extract widget
+
+
+
+
+
+###################
+#	BLOC PATTER   #
+###################
+
+#Mora da se instalira bloc dependency
+dependencies:
+  flutter_bloc: ^8.1.1
