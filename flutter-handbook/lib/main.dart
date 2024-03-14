@@ -1,9 +1,74 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_app/Bloc/user_list/user_list_bloc.dart';
 
+import 'Bloc/user.dart';
 import 'card/quote_card.dart';
 import 'model/quote.dart';
 
 void main() => runApp(MaterialApp(home: QuoteListObjectCardsSeparateClass()));
+
+// class BlocPatternExample extends StatelessWidget {
+//   const BlocPatternExample({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MultiBlocProvider(
+//       providers: [
+//         BlocProvider(create: (context) => UserListBloc()), // Provide your UserListBloc instance
+//       ],
+//       child: MaterialApp(
+//         home: MyHomePage(),
+//       ),
+//     );
+//   }
+// }
+//
+// Widget buildUserTitle(BuildContext, User user){
+//   return ListTitle(
+//     title: Text(user.name),
+//     subtitle: Text(user.email),
+//   )
+// }
+// class MyHomePage extends StatelessWidget {
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Title of the app"),
+//         centerTitle: true,
+//         backgroundColor: Colors.blue,
+//       ),
+//       body: BlocBuilder<UserListBloc, UserListState>(
+//         builder: (context, state) {
+//           if(state is UserListUpdated && state.users.isNotEmpty){
+//             final users = state.users;
+//             return ListView.builder(
+//               itemCount: users.length,
+//               itemBuilder: (context, index){
+//                 final user = users[index];
+//                 return buildUserTitle(context, user);
+//               }
+//             )
+//           }
+//           else const SizedBox(
+//             width: double.infinity,
+//             child: Center(child: Text('No users found')),
+//           );
+//         },
+//       );
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {
+//           // Perform any action here
+//           print("Button pressed");
+//         },
+//         child: const Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
+
 
 
 //STATELESS WIDGETS (Nemaju stanja ne cuvaju podatke o stanju vec uvjek postoje onakve kakve su)
@@ -478,3 +543,4 @@ class _QuoteListObjectCardsSeparateClassState extends State<QuoteListObjectCards
     );
   }
 }
+
