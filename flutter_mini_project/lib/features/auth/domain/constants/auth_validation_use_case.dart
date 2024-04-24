@@ -1,7 +1,7 @@
 import 'package:flutter_mini_project/features/auth/domain/constants/validation_constants.dart';
 import 'package:flutter_mini_project/core/utils/extensions/string_extension.dart';
 
-class LoginValidationUseCase {
+class AuthValidationUseCase {
   String? validatePassword(String? password) {
     if (password.isEmptyOrNull) {
       return "Password is required";

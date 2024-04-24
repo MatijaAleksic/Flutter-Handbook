@@ -6,6 +6,7 @@ import 'package:flutter_mini_project/features/auth/presentation/page/onboarding_
 import 'package:flutter_mini_project/features/auth/domain/usecase/auth_usecase.dart';
 import 'package:flutter_mini_project/features/university/domain/helpers/university_helper.dart';
 import 'package:flutter_mini_project/features/university/presentation/page/single_university_page.dart';
+import 'package:flutter_mini_project/features/user/presentation/page/edit_profile_page.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(routes: [
@@ -20,7 +21,10 @@ final GoRouter router = GoRouter(routes: [
         return SingleUniversityPage(
             university:
                 UniversityHelper.extractUniversityFromExtra(state.extra));
-      })
+      }),
+  GoRoute(
+      path: AppRoutes.editprofile.path,
+      builder: (context, state) => const EditProfilePage()),
 ], redirect: handleRedirect);
 
 Future<String?> handleRedirect(

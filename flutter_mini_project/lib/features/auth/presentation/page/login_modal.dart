@@ -4,7 +4,7 @@ import 'package:flutter_mini_project/core/app/service_locator.dart';
 import 'package:flutter_mini_project/core/router/app_routes.dart';
 import 'package:flutter_mini_project/core/utils/constants/theme_colors.dart';
 import 'package:flutter_mini_project/core/utils/extensions/screen_util_extension.dart';
-import 'package:flutter_mini_project/features/auth/domain/constants/login_validation_use_case.dart';
+import 'package:flutter_mini_project/features/auth/domain/constants/auth_validation_use_case.dart';
 import 'package:flutter_mini_project/features/auth/presentation/blocs-cubits/auth/auth_bloc.dart';
 import 'package:flutter_mini_project/features/user/presentation/blocks-cubits/user/user_bloc.dart';
 
@@ -76,9 +76,7 @@ class _EmailFormField extends StatelessWidget {
       decoration:
           const InputDecoration(icon: Icon(Icons.email), labelText: "Email"),
       validator: (value) {
-        return serviceLocator
-            .get<LoginValidationUseCase>()
-            .validateEmail(value);
+        return serviceLocator.get<AuthValidationUseCase>().validateEmail(value);
       },
       onChanged: (value) {
         context.read<AuthBloc>().add(UpdateEmail(email: value));
@@ -109,7 +107,7 @@ class _PasswordFormField extends StatelessWidget {
                 })),
         validator: (value) {
           return serviceLocator
-              .get<LoginValidationUseCase>()
+              .get<AuthValidationUseCase>()
               .validatePassword(value);
         },
         onChanged: (value) {

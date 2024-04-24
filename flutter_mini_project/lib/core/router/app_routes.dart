@@ -10,6 +10,9 @@ enum AppRoutes {
   ),
   university(
     path: '/university',
+  ),
+  editprofile(
+    path: '/edit-profile',
   );
 
   const AppRoutes({
